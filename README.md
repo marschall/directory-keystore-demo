@@ -7,9 +7,9 @@ Demo project for [marschall/directory-keystore-demo](https://github.com/marschal
 1. A file containing the location of the directory where the certificates are located. Like `/etc/ssl/certs/` or `/etc/pki/tls/certs`.
 1. A properties file to appent the provider to the list of the installed providers.
 1. Three additional JVM options . These are
-  1. `java.security.properties` this file is used to add the security provider to the exising providers. Pay attention to use only a single `=`.
-  1. `javax.net.ssl.trustStore` this file contains the location of the directory with the certificates. This indirection is necessary due to the way Java loads keystores.
-  1. `javax.net.ssl.trustStoreType` this must have the value `directory`
+   1. `java.security.properties` this file is used to add the security provider to the exising providers. Pay attention to use only a single `=`.
+   1. `javax.net.ssl.trustStore` this file contains the location of the directory with the certificates. This indirection is necessary due to the way Java loads keystores.
+   1. `javax.net.ssl.trustStoreType` this must have the value `directory`
 
 Putting this all togehter you JVM options should something like this:
 
